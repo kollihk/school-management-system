@@ -7,9 +7,7 @@ const handleGetAllStudents = asyncHandler(async (req, res) => {
     const students = await getAllStudents({ name, className, section, roll });
     
     res.status(200).json({
-        success: true,
-        count: students.length,
-        data: students
+        students: students
     });
 });
 
